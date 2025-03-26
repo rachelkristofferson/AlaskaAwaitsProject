@@ -1,0 +1,213 @@
+<!--
+I certify that the HTML file I am submitting is all my own work.
+None of it is copied from any source or any person.
+Signed: Kristofferson, Sauro, Vale
+Date: 8/7/2024
+-->
+
+<!--
+Author: Kristofferson, Sauro, Vale
+Date: 8/7/2024
+Class: CSC135
+Project: Project Part 3
+File Name: index.html
+Description: Create a multi-page website for Alaska Awaits with common headers
+and footers and complete navigation. Use responsive design with accessibility.
+-->
+
+<!--
+https://learn.zybooks.com/zybook/CSPCSC135DuerreSummer2024/chapter/4/
+https://learn.zybooks.com/zybook/CSPCSC135DuerreSummer2024/chapter/5/
+https://learn.zybooks.com/zybook/CSPCSC135DuerreSummer2024/chapter/6/
+https://learn.zybooks.com/zybook/CSPCSC135DuerreSummer2024/chapter/8/
+https://learn.zybooks.com/zybook/CSPCSC135DuerreSummer2024/chapter/9/
+Map image: https://www.loc.gov/item/2022589328/
+All other images: https://free-images.com public domain.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Alaska Awaits</title>
+</head>
+
+<body>
+
+    <!--
+    Here I am making the list for the hidden header.
+    Following the video requires using the span element
+    to create three lines that are covering the hidden
+    checkbox. This is a clever way of doing a slide-out
+    menu without JavaScript.
+    -->
+
+    <header>
+
+        <!--
+        The header starts with a hidden skip to main content button
+        for accessibility.
+        -->
+
+        <a href="#maincontent" class="skip">Skip to main content</a>
+
+        <nav class="menu__toggle" aria-label="Collapsible menu">
+            <input type="checkbox" aria-label="Open and close button"
+            id="hiddencheck">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <ul class="menu__links">
+                <li class="menu_hidden"><a href="/"
+                    aria-current="page">Home</a></li>
+                <li class="menu_hidden"><a href="html/short_tours.html"
+                    >Short Tours</a></li>
+                <li class="menu_hidden"><a href="html/long_tours.html"
+                    >Long Tours</a></li>
+                <li class="menu_hidden"><a href="html/custom_tours.html"
+                    >Custom Tours</a></li>
+                <li class="menu_hidden"><a href="html/events.html"
+                        >Events</a></li>
+                <li class="menu_hidden"><a href="html/merchandise.html"
+                        >Merchandise</a></li>   
+                <li class="menu_hidden"><a href="html/donate.html"
+                    >Donate</a></li>
+            </ul>
+        </nav>
+
+        <!--
+        Here I am making the list for the header utilizing button classes
+        within a flexbox. This navigation is for everything over 600px
+        and will be responsive. This is the first location of a flexbox.
+        -->
+
+        <h1>Alaska Awaits</h1>
+        <nav class="navbar" aria-label="Main menu">
+            <ul>
+                <li class="buttontxt"><a href="/"
+                    aria-current="page">Home</a></li>
+                <li class="buttontxt"><a href="html/short_tours.html"
+                    >Short Tours</a></li>
+                <li class="buttontxt"><a href="html/long_tours.html"
+                    >Long Tours</a></li>
+                <li class="buttontxt"><a href="html/custom_tours.html"
+                    >Custom Tours</a></li>
+                <li class="buttontxt"><a href="html/events.html"
+                        >Events</a></li>
+                <li class="buttontxt"><a href="html/merchandise.html"
+                        >Merchandise</a></li>   
+                <li class="buttontxt"><a href="html/donate.html"
+                    >Donate</a></li>
+            </ul>            
+        </nav>
+
+    </header>
+
+    <!--
+    Here is the main section of each page. Each page will need to be
+    identified different with a unique ID so our single CSS file will
+    work and we can each format our pages to our requirements!
+    -->
+
+    <main id="maincontent">
+
+        <aside class="slideshow">
+            <aside class="slides">
+                <img src="images/girl-pointing.jpg" 
+                alt="Person pointing towards mountains">
+                <img class="slide" src="images/kayak.jpg" 
+                alt="People kayaking in river in wilderness">
+                <img class="slide" src="images/aurora.jpg" 
+                alt="Two people looking at aurora borealis">
+                <img class="slide" src="images/salmon.jpg" 
+                alt="Older man holding salmon">
+                <img class="slide" src="images/hiking.jpg"
+                 alt="Person hiking on mountain">
+                <button class="prev" onclick="prevSlide()">&#10094;</button>
+                <button class="next" onclick="nextSlide()">&#10095;</button>
+            </aside>
+        </aside>
+        <script src="scripts/script.js"></script>
+    
+        <section class="about-activities">
+            <h2>About Us...</h2>
+            <p>
+                At Alaska Awaits, we specialize in all things to explore in 
+                the amazing state of Alaska! We have a wide variety of tour 
+                lengths that can accomodate anyone's mobility needs. So 
+                what are you waiting for... Alaska Awaits!
+            </p>
+            <h3>Activities Available</h3>
+            <br>
+            <ul>
+                <li>Hunting</li>
+                <li>Kayaking</li>
+                <li>Fishing</li>
+                <li>Whale Watching</li>
+                <li>Hiking</li>
+                <li>Climbing</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <!--
+    The footer we will use for this webpage is very complex,
+    <article> did not fully apply so here I use <section> the screen reader 
+    will know it's the footer because of the semantic container and I added
+    an aria label to the list making sure its known as a main menu. The
+    footer contains a grid, flex boxes, image, table, and a list.
+    -->
+
+    <footer>
+        <section class="footergrid">
+
+            <h2 class="areaf1">
+                Alaska Awaits! Plan Your Trip With Us Now.
+            </h2>
+
+            <ul class="areaf2" aria-label="Main menu">
+
+                <!--
+                Here I used #top because it takes you back to 
+                the top of the page without scrolling.
+                -->
+
+                <li><a href="#top" aria-current="page"
+                    >Back to Top</a></li>
+                <li><a href="html/short_tours.html">Short Tours</a></li>
+                <li><a href="html/long_tours.html">Long Tours</a></li>
+                <li><a href="html/custom_tours.html">Custom Tours</a></li>
+                <li><a href="html/events.html">Events</a></li>
+                <li><a href="html/merchandise.html">Merchandise</a></li>
+                <li><a href="html/donate.html">Donate</a></li>
+            </ul>
+
+            <p class="areaf3">
+                Alaska Awaits
+            </p>
+
+            <figure>
+
+                <img class="areaf4" src="images/socials.png" alt="">
+                <figcaption>
+                    Connect With Us
+                </figcaption>
+
+            </figure>
+
+            <p class="areaf5">
+                Alaska Awaits All Rights Reserved &copy; 2024
+                1776 W 1st St, New York, NY 10011 
+            </p>
+
+        </section>
+    </footer>
+
+</body>
+</html>
