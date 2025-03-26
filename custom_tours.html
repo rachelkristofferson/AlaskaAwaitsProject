@@ -1,0 +1,269 @@
+<!--
+I certify that the HTML file I am submitting is all my own work.
+None of it is copied from any source or any person.
+Signed: Thomas Sauro.
+Date: 8/4/2024
+-->
+<!--
+Author: Thomas Sauro
+Date: 8/4/2024
+Class: CSC135
+Project: 
+File Name: custom_tours.html
+Description: 
+-->
+<!--
+Pictures: https://www.w3schools.com/howto/howto_js_slideshow.asp
+Javascript picture slideshow: https://www.youtube.com/watch?v=749ta0nvj8s
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alaska Awaits</title>
+        <link href="../css/styles.css" rel="stylesheet">
+    </head>
+
+<body>
+
+    <!--
+    Here I am making the list for the hidden header.
+    Following the video requires using the span element
+    to create three lines that are covering the hidden
+    checkbox. This is a clever way of doing a slide-out
+    menu without JavaScript.
+    -->
+
+    <header>
+
+        <!--
+        The header starts with a hidden skip to main content button
+        for accessibility.
+        -->
+
+        <a href="#maincontent" class="skip">Skip to main content</a>
+
+        <nav class="menu__toggle" aria-label="Collapsible menu">
+            <input type="checkbox" aria-label="Open and close button"
+            id="hiddencheck">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <ul class="menu__links">
+                <li class="menu_hidden"><a href="/"
+                    >Home</a></li>
+                <li class="menu_hidden"><a href="short_tours.html"
+                    >Short Tours</a></li>
+                <li class="menu_hidden"><a href="long_tours.html"
+                    >Long Tours</a></li>
+                <li class="menu_hidden"><a href="custom_tours.html"
+                    aria-current="page">Custom Tours</a></li>
+                <li class="menu_hidden"><a href="events.html"
+                    >Events</a></li>
+                <li class="menu_hidden"><a href="merchandise.html"
+                    >Merchandise</a></li>   
+                <li class="menu_hidden"><a href="donate.html"
+                    >Donate</a></li>
+            </ul>
+        </nav>
+
+        <!--
+        Here I am making the list for the header utilizing button classes
+        within a flexbox. This navigation is for everything over 600px
+        and will be responsive. This is the first location of a flexbox.
+        -->
+
+        <h1>Alaska Awaits</h1>
+        <nav class="navbar" aria-label="Main menu">
+            <ul>
+                <li class="buttontxt"><a href="/"
+                    >Home</a></li>
+                <li class="buttontxt"><a href="short_tours.html"
+                    >Short Tours</a></li>
+                <li class="buttontxt"><a href="long_tours.html"
+                    >Long Tours</a></li>
+                <li class="buttontxt"><a href="custom_tours.html"
+                    aria-current="page">Custom Tours</a></li>
+                <li class="buttontxt"><a href="events.html"
+                    >Events</a></li>
+                <li class="buttontxt"><a href="merchandise.html"
+                    >Merchandise</a></li>   
+                <li class="buttontxt"><a href="donate.html"
+                    >Donate</a></li>
+            </ul>            
+        </nav>
+
+    </header>
+
+    <!--
+    Here is the main section of each page. Each page will need to be
+    identified different with a unique ID so our single CSS file will
+    work and we can each format our pages to our requirements!
+    -->
+
+    <main id="maincontent">
+
+        <section class="customTourInfo">
+
+            <h2 class="customTourHead">Custom Tours</h2>
+
+            <p>
+                Alaska Awaits offers experiences of a lifetime! A
+                short tour may not cover them all. So, consider a custom
+                tour for a tailored experience to be sure you don't 
+                miss anything!
+            </p>
+
+            <figure class="customImg">
+
+                <img src="../images/flyFishing.jpg" 
+                alt="man fly fishing in stream" class="formImage">
+
+            </figure>
+
+        </section>
+
+        <section class="formBackground">
+
+            <form class="customTourForm">
+
+                <h2> Register Custom Tour:</h2><br>
+                <label for="firstNameForm">First Name:</label><br>
+                <input type="text" class="formInput" 
+                id="firstNameForm" name="firstNameForm"><br>
+                <label for="lastNameForm">Last Name:</label><br>
+                <input type="text" class="formInput" 
+                id="lastNameForm" name="lastNameForm"><br>
+                <label for="phoneForm">Phone:</label><br>
+                <input type="tel" class="formInput" 
+                id="phoneForm" name="phoneForm"><br>
+                <br>
+                <label for="startDate">Start Date:</label>
+                <input type="date" 
+                id="startDate" class="formInput">
+                <br><br>
+                <label for="endDate">End Date:</label>
+                <input type="date" 
+                id="endDate" class="formInput">
+                <br><br>
+                
+                <fieldset>
+
+                    <legend>Please Choose Activities</legend>
+
+                    <input type="checkbox" id="interest1"
+                    name="interest1" value="Hunting">
+                    <label for="interest1" class="fsLabel">
+                        Hunting
+                    </label><br>
+
+                    <input type="checkbox" id="interest2"
+                    name="interest2" value="Climbing">
+                    <label for="interest2" class="fsLabel" >
+                        Climbing
+                    </label><br>
+
+                    <input type="checkbox" id="interest3"
+                    name="interest3" value="Hiking">
+                    <label for="interest3">
+                        Hiking
+                    </label><br>
+
+                    <input type="checkbox" id="interest4"
+                    name="interest4" value="Kayaking">
+                    <label for="interest4">
+                        Kayaking
+                    </label><br>
+
+                    <input type="checkbox" id="interest5"
+                    name="interest5" value="Whale Watching">
+                    <label for="interest5">
+                        Whale Watching
+                    </label><br>
+
+                    <input type="checkbox" id="interest6"
+                    name="interest6" value="Fishing">
+                    <label for="interest6">
+                        Fishing
+                    </label><br><br>
+
+                    <input type="submit" value="Register Tour"><br><br>
+
+                </fieldset>
+
+            </form>
+
+            <figure class="customImg">
+
+                <img src="../images/troutJumping.jpg" 
+                alt="rainbow trout jumping out of water" 
+                class="formImage">
+    
+            </figure>
+            
+        </section>
+
+        
+        
+
+    </main>
+
+    <!--
+    The footer we will use for this webpage is very complex,
+    <article> did not fully apply so here I use <section> the screen reader 
+    will know it's the footer because of the semantic container and I added
+    an aria label to the list making sure its known as a main menu. The
+    footer contains a grid, flex boxes, image, table, and a list.
+    -->
+
+    <footer>
+        <section class="footergrid">
+
+            <h2 class="areaf1">
+                Alaska Awaits! Plan Your Trip With Us Now.
+            </h2>
+
+            <ul class="areaf2" aria-label="Main menu">
+
+                <!--
+                Here I used #top because it takes you back to 
+                the top of the page without scrolling.
+                -->
+
+                <li><a href="/">Home</a></li>
+                <li><a href="short_tours.html">Short Tours</a></li>
+                <li><a href="long_tours.html">Long Tours</a></li>
+                <li><a href="#top"
+                    aria-current="page">Back to Top</a></li>
+                <li><a href="events.html">Events</a></li>
+                <li><a href="merchandise.html">Merchandise</a></li>
+                <li><a href="donate.html">Donate</a></li>
+            </ul>
+
+            <p class="areaf3">
+                Alaska Awaits
+            </p>
+
+            <figure>
+
+                <img class="areaf4" src="/images/socials.png" alt="">
+                <figcaption>
+                    Connect With Us
+                </figcaption>
+
+            </figure>
+
+            <p class="areaf5">
+                Alaska Awaits All Rights Reserved &copy; 2024
+                1776 W 1st St, New York, NY 10011 
+            </p>
+
+        </section>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,310 @@
+<!--
+I certify that the HTML file I am submitting is all my own work.
+None of it is copied from any source or any person.
+Signed: Thomas Sauro.
+Date: 7/31/2024
+-->
+<!--
+Author: Thomas Sauro
+Date: 7/31/2024
+Class: CSC135
+Project: 
+File Name: short_tours.html
+Description: 
+-->
+<!--
+Add references here
+-->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alaska Awaits</title>
+        <link href="../css/styles.css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <header>
+
+            <!--
+            The header starts with a hidden skip to main content button
+            for accessibility.
+            -->
+    
+            <a href="#maincontent" class="skip">Skip to main content</a>
+    
+            <nav class="menu__toggle" aria-label="Collapsible menu">
+                <input type="checkbox" aria-label="Open and close button"
+                id="hiddencheck">
+    
+                <span></span>
+                <span></span>
+                <span></span>
+    
+                <ul class="menu__links">
+                    <li class="menu_hidden"><a href="/"
+                        >Home</a></li>
+                    <li class="menu_hidden"><a href="short_tours.html"
+                        aria-current="page">Short Tours</a></li>
+                    <li class="menu_hidden"><a href="long_tours.html"
+                        >Long Tours</a></li>
+                    <li class="menu_hidden"><a href="custom_tours.html"
+                        >Custom Tours</a></li>
+                    <li class="menu_hidden"><a href="events.html"
+                            >Events</a></li>
+                    <li class="menu_hidden"><a href="merchandise.html"
+                            >Merchandise</a></li>   
+                    <li class="menu_hidden"><a href="donate.html"
+                        >Donate</a></li>
+                </ul>
+            </nav>
+    
+            <!--
+            Here I am making the list for the header utilizing button classes
+            within a flexbox. This navigation is for everything over 600px
+            and will be responsive. This is the first location of a flexbox.
+            -->
+    
+            <h1>Alaska Awaits</h1>
+            <nav class="navbar" aria-label="Main menu">
+                <ul>
+                    <li class="buttontxt"><a href="/"
+                        >Home</a></li>
+                    <li class="buttontxt"><a href="short_tours.html"
+                        aria-current="page">Short Tours</a></li>
+                    <li class="buttontxt"><a href="long_tours.html"
+                        >Long Tours</a></li>
+                    <li class="buttontxt"><a href="custom_tours.html"
+                        >Custom Tours</a></li>
+                    <li class="buttontxt"><a href="events.html"
+                            >Events</a></li>
+                    <li class="buttontxt"><a href="merchandise.html"
+                            >Merchandise</a></li>   
+                    <li class="buttontxt"><a href="donate.html"
+                        >Donate</a></li>
+                </ul>            
+            </nav>
+    
+        </header>
+
+        <main id="maincontent" class="short">
+
+            <section class="shortTourSect">
+
+                <h2>Short Tours</h2>
+
+                <table class="shortTable">
+                    
+                    <caption>Dates and Activities Available</caption>
+
+                    <tr>
+                        <th>Dates</th>
+                        <th>Length</th>
+                        <th>Activities</th>
+                        <th>Intensity</th>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="2">
+                            <label for="dates1">Select Dates:</label>
+                            <select name="dates" id="dates1">
+                                <option value="June 24 am">June 24 am</option>
+                                <option value="June 24 pm">June 24 pm</option>
+                                <option value="June 25 am">June 25 am</option>
+                            </select>
+                        </td>
+                        <td rowspan="2">1/2 Day</td>
+                        <td>Gentle ride around the trails</td>
+                        <td>Low</td>
+                    </tr>
+
+                    <tr>
+                        <td>Hike local trails</td>
+                        <td>Low/Medium</td>
+                    </tr>
+
+                    <tr>
+                        <td rowspan="2">
+                            <label for="dates2">Select Dates:</label>
+                            <select name="dates" id="dates2">
+                                <option value="June 24 - June 27">June 24 - June 27</option>
+                                <option value="June 28 - July 1">June 28 - July 1</option>
+                                <option value="July 2 - July 5">July 2 - July 5</option>
+                            </select>
+                        </td>
+                        <td rowspan="2">3 Days</td>
+                        <td>Whale Watching</td>
+                        <td>Low/Medium</td>
+                    </tr>
+
+                    <tr>
+                        <td>Fishing/Whale Watching</td>
+                        <td>Medium</td>
+                    </tr>
+                    
+                    <tr>
+
+                        <td rowspan="2">
+                            <label for="dates3">Select Dates:</label>
+                            <select name="dates" id="dates3">
+                                <option value="June 24 - July 2">June 24 - July 2</option>
+                                <option value="July 3 - July 11">July 3 - July 11</option>
+                                <option value="July 12 - July 20">July 12 - July 20</option>
+                            </select>
+                        </td>
+
+                        <td rowspan="2">8 Days</td>
+                        <td>Fishing/Whale Watching</td>
+                        <td>Medium</td>
+
+                    </tr>
+
+                    <tr>
+                        <td>Hiking/Fishing/Whale Watching</td>
+                        <td>Medium/High</td>
+                    </tr>
+
+                </table>
+
+            </section>
+
+            <section class="shortTourActivities">
+
+                <h2>Features of Alaska Awaits</h2>
+
+                <br>
+
+                <section class="trails">
+
+                    <h3>Trails and Forest Info:</h3>
+
+                    <ul>
+
+                        <li>
+                            With nearly one thousand trails and thousands of miles to explore,
+                            Alaska has trails for novice to advanced hikers as well as motor vehicles.
+                        </li>
+
+                        <li>
+                            Alaska and its trails offer unique and different experiences
+                            between its winter and summer seasons. Consider this when
+                            planning your tour with Alaska Awaits!
+                        </li>
+
+                        <li>
+                            Trails are a fantastic way to experience some of the
+                            iconic sites in Alaska including the Alaska Range mountains,
+                            the Tongass National Forest, and their many alpine
+                            lakes, rivers, and streams along the trails.
+                        </li>
+
+                        <li>
+                            Wether on a guided hike or a selfguided one, encounters with
+                            animals are common and the wilds of Alaska
+                            are home to many variety of wildlife.
+                        </li>
+
+                    </ul>
+
+                    <h3>Animals of Alaska:</h3>
+
+                    <ul>
+
+                        <li>Bear (grizzly, brown, black, polar)</li>
+                        <li>Moose</li>
+                        <li>Caribou</li>
+                        <li>Wolf</li>
+                        <li>Eagles</li>
+                        <li>Whales (humpback and gray)</li>
+                        <li>Orcas</li>
+                        <li>And many more.</li>
+
+                    </ul>
+
+                </section>
+
+                <figure class="shortTourImage">
+                    <img src="../images/trailAlaska.jpg" alt="">
+                </figure> 
+                
+
+                <section class="waters">  
+
+                    <h3>Water Info:</h3>
+                    
+                    <ul>
+                        <li>Alaska is home to and known for its five
+                            native varieties of salmon and is
+                            the primary provider of sustainable salmon in the U.S..</li>
+                        <li>Those sustainable fishing practices provide
+                            excellent angling opportunities that are renound globally.</li>
+                        <li>Surrounding Oceans make for majestic whale watching cruises
+                            with glaciers in the background.</li>
+                        <li>Want to experience the majesty for yourself? Alaska Awaits Tours provide
+                            the ultimate outdoor excursion for you, your friends, and family.</li>
+                    </ul>
+
+                </section>
+
+                <figure class="shortTourImage">
+                    <img src="../images/glacierAlaska.jpg" alt="">
+                </figure>
+                
+                <p>There are many bodies of water in Alaska, some of which are alpine.
+                    It is also surrounded by both the Arctic and Pacific Oceans
+                    bringing opportunities for world-class fishing and whale watching.
+                </p>
+
+            </section>
+
+        </main>
+
+        <footer>
+            <section class="footergrid">
+    
+                <h2 class="areaf1">
+                    Alaska Awaits! Plan Your Trip With Us Now.
+                </h2>
+    
+                <ul class="areaf2" aria-label="Main menu">
+    
+                    <!--
+                    Here I used #top because it takes you back to 
+                    the top of the page without scrolling.
+                    -->
+    
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#top"  aria-current="page"
+                        >Back to Top</a></li>
+                    <li><a href="long_tours.html">Long Tours</a></li>
+                    <li><a href="custom_tours.html">Custom Tours</a></li>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="merchandise.html">Merchandise</a></li>
+                    <li><a href="donate.html">Donate</a></li>
+                </ul>
+    
+                <p class="areaf3">
+                    Alaska Awaits
+                </p>
+    
+                <figure>
+    
+                    <img class="areaf4" src="../images/socials.png" alt="">
+                    <figcaption>
+                        Connect With Us
+                    </figcaption>
+    
+                </figure>
+    
+                <p class="areaf5">
+                    Alaska Awaits All Rights Reserved &copy; 2024
+                    1776 W 1st St, New York, NY 10011 
+                </p>
+    
+            </section>
+        </footer>
+    </body>
+</html>
